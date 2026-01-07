@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kollam Cashews: 60+ Years of Heritage & Quality</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS Reset and Global Styles */
+        :root {
+            --color-primary: #8B4513; /* Rich Brown */
+            --color-secondary: #FFD700; /* Gold/Cashew Color */
+            --color-accent: #006400; /* Deep Kerala Green */
+            --color-text: #333;
+            --color-light: #f9f9f9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            color: var(--color-text);
+            line-height: 1.6;
+            background-color: white;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--color-primary);
+        }
+
+        section {
+            padding: 60px 5%;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--color-accent);
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background-color: var(--color-primary);
+        }
+
+        /* --- Header/Navigation --- */
+        .navbar {
+            background-color: white;
+            padding: 15px 5%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar-logo {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            margin-left: 25px;
+            color: var(--color-text);
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-accent);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            background-image: url('image1'); /* Placeholder Image */
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4); /* Dark Overlay */
+        }
+
+        .hero-content {
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 15px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.4em;
+            margin-bottom: 30px;
+            font-weight: 400;
+            color: #ffe0b2; /* Lighter cream color */
+        }
+
+        /* --- Heritage Section --- */
+        .heritage-section {
+            background-color: var(--color-light);
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .heritage-text, .heritage-image {
+            flex: 1;
+        }
+
+        .heritage-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .heritage-text h3 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            color: var(--color-accent);
+        }
+
+        /* --- Features Section --- */
+        .features-section {
+            text-align: center;
+        }
+
+        .features-section h2 {
+            margin-bottom: 40px;
+            font-size: 2.5em;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            padding: 20px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-card h4 {
+            color: var(--color-primary);
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+
+        .feature-card .icon {
+            font-size: 2em;
+            color: var(--color-accent);
+        }
+
+        /* --- Product Gallery --- */
+        .products-section {
+            background-color: var(--color-light);
+            text-align: center;
+        }
+
+        .products-section h2 {
+            margin-bottom: 40px;
+            font-size: 2.5em;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-info h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: var(--color-accent);
+        }
+
+        /* --- Contact Section --- */
+        .contact-section {
+            background-color: white;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            margin-bottom: 40px;
+            font-size: 2.5em;
+        }
+
+        .contact-details {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            text-align: center;
+        }
+
+        .contact-item .icon {
+            font-size: 2.5em;
+            color: var(--color-primary);
+            margin-bottom: 10px;
+        }
+
+        .contact-item p {
+            margin: 5px 0;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: var(--color-primary);
+            color: white;
+            padding: 30px 5%;
+            font-size: 0.9em;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Responsive Design (Mobile) --- */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 15px 5%;
+            }
+
+            .nav-links {
+                margin-top: 10px;
+            }
+
+            .nav-links a {
+                margin: 0 10px;
+            }
+
+            .hero h1 {
+                font-size: 2.5em;
+            }
+
+            .hero p {
+                font-size: 1.2em;
+            }
+
+            .heritage-section {
+                flex-direction: column;
+            }
+
+            .contact-details {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-links {
+                margin-top: 15px;
+            }
+
+            .footer-links a {
+                margin: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="#" class="navbar-logo">🥜 **Kollam Cashews**</a>
+        <nav class="nav-links">
+            <a href="#hero">Home</a>
+            <a href="#heritage">Our Heritage</a>
+            <a href="#products">Products</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1>**60+ Years of Excellence. Pure Kollam Cashews.**</h1>
+            <p>From the Cashew Capital of the World, a legacy of quality, purity, and taste, cherished since 1965.</p>
+            <a href="#products" class="cta-button">View Products & Shop Now</a>
+        </div>
+    </section>
+
+    <section class="heritage-section container" id="heritage">
+        <div class="heritage-text">
+            <h3>📜 Our Legacy in the Cashew Capital</h3>
+            <p>For over six decades, **[Your Business Name]** has been synonymous with the finest cashews in Kerala. Based in **Kollam**, the heartland of the cashew industry, our journey began **60+ years ago** with a simple commitment: to deliver unparalleled quality.</p>
+            <br>
+            <p>Our deep understanding of traditional processing methods, combined with modern hygiene standards, ensures that every cashew you enjoy is crunchy, nutritious, and bursting with natural flavor. We are more than a business; we are a family tradition built on trust and the pure taste of Kerala.</p>
+        </div>
+        <div class="heritage-image">
+            <img src="image2" alt="Founders or vintage image of the business">
+        </div>
+    </section>
+
+    <section class="features-section container">
+        <h2>✨ The [Your Business Name] Difference</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="icon">✅</div>
+                <h4>60+ Years Trust</h4>
+                <p>Decades of expertise in sourcing, processing, and delivering the highest grade cashews.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🌴</div>
+                <h4>Kollam Sourcing</h4>
+                <p>Grown and processed exclusively in Kollam, ensuring genuine Kerala quality and freshness.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">⭐</div>
+                <h4>Purity & Quality</h4>
+                <p>Strict quality control—hand-sorted, hygienically processed, and preservative-free.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🌍</div>
+                <h4>Global Standards</h4>
+                <p>We adhere to the highest international food safety and quality standards for all markets.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="products-section" id="products">
+        <h2>🌰 Our Cashew Varieties</h2>
+        <div class="product-grid container">
+            <div class="product-card">
+                <img src="image3" alt="W-180 King Size Cashews">
+                <div class="product-info">
+                    <h3>W-180 (King Size)</h3>
+                    <p>The largest, whitest, and most premium whole cashews. Excellent for gifting and special occasions.</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="image4" alt="W-320 Standard Grade Cashews">
+                <div class="product-info">
+                    <h3>W-320 (Standard Grade)</h3>
+                    <p>Our most popular and versatile whole cashew, ideal for daily snacking and culinary use.</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="image5" alt="Cashew Splits (LWP)">
+                <div class="product-info">
+                    <h3>Cashew Splits (LWP)</h3>
+                    <p>Nutritious and budget-friendly broken pieces, perfect for baking, desserts, and Indian sweets.</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="image10" alt="Roasted and Salted Cashews">
+                <div class="product-info">
+                    <h3>Roasted & Salted</h3>
+                    <p>Our signature W-320 cashews, perfectly roasted and lightly seasoned for a crunchy treat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features-section container" id="gallery">
+        <h2>🖼️ A Look Behind the Scenes</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="image6" alt="Processing Unit">
+                <div class="product-info"><h4>State-of-the-Art Processing</h4></div>
+            </div>
+            <div class="product-card">
+                <img src="image7" alt="Hand-Sorting">
+                <div class="product-info"><h4>Skilled Hand-Sorting</h4></div>
+            </div>
+            <div class="product-card">
+                <img src="image8" alt="Drying Cashews">
+                <div class="product-info"><h4>The Kerala Sun Dry</h4></div>
+            </div>
+            <div class="product-card">
+                <img src="image9" alt="Packaged Product">
+                <div class="product-info"><h4>Ready for Dispatch</h4></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section container" id="contact">
+        <h2>📞 Get in Touch</h2>
+        <p style="margin-bottom: 25px;">We'd love to hear from you! Reach out for bulk orders, custom requirements, or any inquiries.</p>
+        <div class="contact-details">
+            <div class="contact-item">
+                <div class="icon">📍</div>
+                <h4>Our Address</h4>
+                <p>[Your Full Business Address]</p>
+                <p>Kollam, Kerala, India - [PIN Code]</p>
+            </div>
+            <div class="contact-item">
+                <div class="icon">📱</div>
+                <h4>WhatsApp / Phone</h4>
+                <p>+91 [Your Phone Number]</p>
+                <a href="https://wa.me/yourphonenumber" class="cta-button" style="padding: 8px 15px; margin-top: 10px;">Chat on WhatsApp</a>
+            </div>
+            <div class="contact-item">
+                <div class="icon">📧</div>
+                <h4>Email Us</h4>
+                <p>[Your Email Address]</p>
+                <a href="mailto:youremail@example.com" class="cta-button" style="padding: 8px 15px; margin-top: 10px;">Send an Email</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>Copyright © 2024 [Your Business Name]. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="#hero">Home</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
