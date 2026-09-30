@@ -25,3 +25,9 @@ document.getElementById('enquiry-form').addEventListener('submit', event => {
   window.open(`https://wa.me/919656915303?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
 });
 document.getElementById('year').textContent = new Date().getFullYear();
+
+// Keep the media gallery quiet: only the clip selected by the visitor plays.
+const films = [...document.querySelectorAll('.video-card video')];
+films.forEach(film => film.addEventListener('play', () => {
+  films.forEach(other => { if (other !== film) other.pause(); });
+}));
