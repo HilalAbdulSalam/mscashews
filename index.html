@@ -1,504 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kollam Cashews: 60+ Years of Heritage & Quality</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        /* CSS Reset and Global Styles */
-        :root {
-            --color-primary: #8B4513; /* Rich Brown */
-            --color-secondary: #FFD700; /* Gold/Cashew Color */
-            --color-accent: #006400; /* Deep Kerala Green */
-            --color-text: #333;
-            --color-light: #f9f9f9;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Lato', sans-serif;
-            color: var(--color-text);
-            line-height: 1.6;
-            background-color: white;
-        }
-
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
-            color: var(--color-primary);
-        }
-
-        section {
-            padding: 60px 5%;
-            margin: 0 auto;
-            max-width: 1200px;
-        }
-
-        /* Utility Classes */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background-color: var(--color-accent);
-            color: white;
-            padding: 12px 30px;
-            text-decoration: none;
-            font-weight: 700;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-            border: none;
-            cursor: pointer;
-        }
-
-        .cta-button:hover {
-            background-color: var(--color-primary);
-        }
-
-        /* --- Header/Navigation --- */
-        .navbar {
-            background-color: white;
-            padding: 15px 5%;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .navbar-logo {
-            font-size: 1.8em;
-            font-weight: 700;
-            color: var(--color-primary);
-            text-decoration: none;
-        }
-
-        .nav-links a {
-            margin-left: 25px;
-            color: var(--color-text);
-            text-decoration: none;
-            font-weight: 700;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--color-accent);
-        }
-
-        /* --- Hero Section --- */
-        .hero {
-            background-image: url('image1'); /* Placeholder Image */
-            background-size: cover;
-            background-position: center;
-            height: 80vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            position: relative;
-        }
-
-        .hero::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.4); /* Dark Overlay */
-        }
-
-        .hero-content {
-            z-index: 1;
-        }
-
-        .hero h1 {
-            font-size: 3.5em;
-            margin-bottom: 15px;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        .hero p {
-            font-size: 1.4em;
-            margin-bottom: 30px;
-            font-weight: 400;
-            color: #ffe0b2; /* Lighter cream color */
-        }
-
-        /* --- Heritage Section --- */
-        .heritage-section {
-            background-color: var(--color-light);
-            display: flex;
-            gap: 40px;
-            align-items: center;
-        }
-
-        .heritage-text, .heritage-image {
-            flex: 1;
-        }
-
-        .heritage-image img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .heritage-text h3 {
-            font-size: 2em;
-            margin-bottom: 15px;
-            color: var(--color-accent);
-        }
-
-        /* --- Features Section --- */
-        .features-section {
-            text-align: center;
-        }
-
-        .features-section h2 {
-            margin-bottom: 40px;
-            font-size: 2.5em;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-
-        .feature-card {
-            padding: 20px;
-            border: 1px solid #eee;
-            border-radius: 8px;
-            background-color: white;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .feature-card h4 {
-            color: var(--color-primary);
-            margin-top: 10px;
-            font-size: 1.2em;
-        }
-
-        .feature-card .icon {
-            font-size: 2em;
-            color: var(--color-accent);
-        }
-
-        /* --- Product Gallery --- */
-        .products-section {
-            background-color: var(--color-light);
-            text-align: center;
-        }
-
-        .products-section h2 {
-            margin-bottom: 40px;
-            font-size: 2.5em;
-        }
-
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .product-card {
-            background-color: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .product-card img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-        }
-
-        .product-info {
-            padding: 20px;
-        }
-
-        .product-info h3 {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-            color: var(--color-accent);
-        }
-
-        /* --- Contact Section --- */
-        .contact-section {
-            background-color: white;
-            text-align: center;
-        }
-
-        .contact-section h2 {
-            margin-bottom: 40px;
-            font-size: 2.5em;
-        }
-
-        .contact-details {
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-            margin-bottom: 40px;
-            flex-wrap: wrap;
-        }
-
-        .contact-item {
-            text-align: center;
-        }
-
-        .contact-item .icon {
-            font-size: 2.5em;
-            color: var(--color-primary);
-            margin-bottom: 10px;
-        }
-
-        .contact-item p {
-            margin: 5px 0;
-        }
-
-        /* --- Footer --- */
-        footer {
-            background-color: var(--color-primary);
-            color: white;
-            padding: 30px 5%;
-            font-size: 0.9em;
-        }
-
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            flex-wrap: wrap;
-        }
-
-        .footer-links a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-        }
-
-        .footer-links a:hover {
-            text-decoration: underline;
-        }
-
-        /* --- Responsive Design (Mobile) --- */
-        @media (max-width: 768px) {
-            .navbar {
-                flex-direction: column;
-                padding: 15px 5%;
-            }
-
-            .nav-links {
-                margin-top: 10px;
-            }
-
-            .nav-links a {
-                margin: 0 10px;
-            }
-
-            .hero h1 {
-                font-size: 2.5em;
-            }
-
-            .hero p {
-                font-size: 1.2em;
-            }
-
-            .heritage-section {
-                flex-direction: column;
-            }
-
-            .contact-details {
-                flex-direction: column;
-                gap: 30px;
-            }
-
-            .footer-content {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .footer-links {
-                margin-top: 15px;
-            }
-
-            .footer-links a {
-                margin: 0 10px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#193d30">
+  <meta name="description" content="Discover Kajuva premium drum-roasted cashews from M S Cashews, Kollam, Kerala. Explore W180, W240 and W320 grades in 250 g, 500 g and 1 kg packs. Contact us for retail and bulk enquiries.">
+  <title>KAJUVA — A little everyday indulgence | M S Cashews</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-
-    <header class="navbar">
-        <a href="#" class="navbar-logo">🥜 **Kollam Cashews**</a>
-        <nav class="nav-links">
-            <a href="#hero">Home</a>
-            <a href="#heritage">Our Heritage</a>
-            <a href="#products">Products</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-
-    <section class="hero" id="hero">
-        <div class="hero-content">
-            <h1>**60+ Years of Excellence. Pure Kollam Cashews.**</h1>
-            <p>From the Cashew Capital of the World, a legacy of quality, purity, and taste, cherished since 1965.</p>
-            <a href="#products" class="cta-button">View Products & Shop Now</a>
-        </div>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="announcement">FROM KOLLAM, KERALA <span>•</span> MADE FOR MOMENTS WORTH SAVOURING</div>
+  <header class="header">
+    <a class="brand" href="#home" aria-label="Kajuva home">KAJUVA<span>BY M S CASHEWS</span></a>
+    <button class="menu-toggle" aria-controls="navigation" aria-expanded="false">Menu <span aria-hidden="true">☰</span></button>
+    <nav id="navigation" aria-label="Main navigation">
+      <a href="#collection">Our collection</a><a href="#story">Our story</a><a href="#quality">The Kajuva way</a>
+      <a href="#contact" class="nav-contact">Let’s talk <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="tiny-line"></span> SIMPLE INGREDIENT. EXCEPTIONAL PLEASURE.</p>
+        <h1 id="hero-title">A little everyday<br><em>indulgence.</em></h1>
+        <p class="intro">Beautifully whole. Gently drum roasted.<br>Discover the rich, satisfying crunch of Kajuva premium cashews.</p>
+        <div class="hero-actions"><a class="button" href="#collection">Explore the collection <span aria-hidden="true">↗</span></a><a class="text-link" href="#story">Meet Kajuva <span aria-hidden="true">→</span></a></div>
+        <div class="hero-caption"><span class="veg" aria-hidden="true"><i></i></span><span>100% cashews. Naturally delicious.</span></div>
+      </div>
+      <div class="hero-art">
+        <div class="hero-circle"></div>
+        <span class="art-label">THE GOODNESS OF SOMETHING SIMPLE</span>
+        <img class="hero-bowl" src="assets/cashew-bowl-premium.webp" alt="A walnut bowl filled with golden whole cashews" width="1200" height="1200" fetchpriority="high">
+        <div class="seal"><span>ONE INGREDIENT</span><strong>100%</strong><span>CASHEW NUTS</span></div>
+        <div class="art-footnote"><span>DRUM ROASTED</span><span>FULL OF CHARACTER</span></div>
+      </div>
+      <a class="scroll-note" href="#collection">A TASTE OF THE GOOD LIFE <span aria-hidden="true">↓</span></a>
     </section>
-
-    <section class="heritage-section container" id="heritage">
-        <div class="heritage-text">
-            <h3>📜 Our Legacy in the Cashew Capital</h3>
-            <p>For over six decades, **[Your Business Name]** has been synonymous with the finest cashews in Kerala. Based in **Kollam**, the heartland of the cashew industry, our journey began **60+ years ago** with a simple commitment: to deliver unparalleled quality.</p>
-            <br>
-            <p>Our deep understanding of traditional processing methods, combined with modern hygiene standards, ensures that every cashew you enjoy is crunchy, nutritious, and bursting with natural flavor. We are more than a business; we are a family tradition built on trust and the pure taste of Kerala.</p>
-        </div>
-        <div class="heritage-image">
-            <img src="image2" alt="Founders or vintage image of the business">
-        </div>
+    <div class="qualities" aria-label="Product highlights"><span>100% cashew nuts</span><i aria-hidden="true">✧</i><span>Drum roasted</span><i aria-hidden="true">✧</i><span>Three whole-cashew grades</span><i aria-hidden="true">✧</i><span>From Kollam, Kerala</span></div>
+    <section class="section collection" id="collection" aria-labelledby="collection-title">
+      <div class="section-top"><div><p class="eyebrow">THE KAJUVA COLLECTION</p><h2 id="collection-title">Good things.<br><em>In your favourite size.</em></h2></div><p>For a quiet moment, a shared bowl, or a kitchen that’s always creating. Find a pack that fits your everyday.</p></div>
+      <div class="product-grid">
+        <article class="product"><div class="product-image"><span class="product-tag">THE EVERYDAY COMPANION</span><img src="assets/kajuva-pouch-premium.webp" width="864" height="1200" alt="Kajuva emerald and gold pouch concept" loading="lazy"><span class="pack-weight">250 <small>g</small></span></div><div class="product-title"><h3>A little treat</h3><span>250 g</span></div><p>A handful of goodness, whenever you fancy.</p><a href="https://wa.me/919656915303?text=Hello%20Kajuva%2C%20I%27d%20like%20to%20enquire%20about%20the%20250%20g%20pack." target="_blank" rel="noopener noreferrer" class="product-link">Enquire about this pack <span aria-hidden="true">↗</span></a></article>
+        <article class="product"><div class="product-image"><span class="product-tag">BETTER WHEN SHARED</span><img src="assets/kajuva-pouch-premium.webp" width="864" height="1200" alt="Kajuva emerald and gold pouch concept" loading="lazy"><span class="pack-weight">500 <small>g</small></span></div><div class="product-title"><h3>A reason to gather</h3><span>500 g</span></div><p>Bring something delicious to the table.</p><a href="https://wa.me/919656915303?text=Hello%20Kajuva%2C%20I%27d%20like%20to%20enquire%20about%20the%20500%20g%20pack." target="_blank" rel="noopener noreferrer" class="product-link">Enquire about this pack <span aria-hidden="true">↗</span></a></article>
+        <article class="product"><div class="product-image"><span class="product-tag">THE PANTRY ESSENTIAL</span><img src="assets/kajuva-pouch-premium.webp" width="864" height="1200" alt="Kajuva emerald and gold pouch concept" loading="lazy"><span class="pack-weight">1 <small>kg</small></span></div><div class="product-title"><h3>More to savour</h3><span>1 kg</span></div><p>For generous hosts and inspired home cooks.</p><a href="https://wa.me/919656915303?text=Hello%20Kajuva%2C%20I%27d%20like%20to%20enquire%20about%20the%201%20kg%20pack." target="_blank" rel="noopener noreferrer" class="product-link">Enquire about this pack <span aria-hidden="true">↗</span></a></article>
+      </div>
+      <p class="collection-note">Choose from W180, W240 and W320 grades. Contact us for current prices and availability.<br>Packaging shown is a design concept. Final packaging may vary.</p>
     </section>
-
-    <section class="features-section container">
-        <h2>✨ The [Your Business Name] Difference</h2>
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="icon">✅</div>
-                <h4>60+ Years Trust</h4>
-                <p>Decades of expertise in sourcing, processing, and delivering the highest grade cashews.</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon">🌴</div>
-                <h4>Kollam Sourcing</h4>
-                <p>Grown and processed exclusively in Kollam, ensuring genuine Kerala quality and freshness.</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon">⭐</div>
-                <h4>Purity & Quality</h4>
-                <p>Strict quality control—hand-sorted, hygienically processed, and preservative-free.</p>
-            </div>
-            <div class="feature-card">
-                <div class="icon">🌍</div>
-                <h4>Global Standards</h4>
-                <p>We adhere to the highest international food safety and quality standards for all markets.</p>
-            </div>
-        </div>
+    <section class="story" id="story" aria-labelledby="story-title">
+      <div class="story-art"><span class="eyebrow">ROOTED IN KOLLAM</span><img src="assets/cashews-editorial.webp" alt="Whole roasted cashews in a wooden bowl, styled with natural linen and warm stone" width="1122" height="1402" loading="lazy"><span class="story-art-caption">A SIMPLE PLEASURE,<br>A LITTLE CLOSER TO HOME.</span></div>
+      <div class="story-copy"><p class="eyebrow">OUR STORY</p><h2 id="story-title">From our corner<br>of Kerala.<br><em>To your everyday.</em></h2><p>Kajuva comes from M S Cashews in Kannanalloor, Kollam. Our focus is simple: premium whole cashews, carefully selected and drum roasted to bring out their rich taste and satisfying crunch.</p><p>Enjoy them by the handful, share them over a conversation, or add a little richness to a favourite recipe. Good food belongs in the everyday.</p><a class="text-link" href="#quality">Discover the Kajuva way <span aria-hidden="true">→</span></a></div>
     </section>
-
-    <section class="products-section" id="products">
-        <h2>🌰 Our Cashew Varieties</h2>
-        <div class="product-grid container">
-            <div class="product-card">
-                <img src="image3" alt="W-180 King Size Cashews">
-                <div class="product-info">
-                    <h3>W-180 (King Size)</h3>
-                    <p>The largest, whitest, and most premium whole cashews. Excellent for gifting and special occasions.</p>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="image4" alt="W-320 Standard Grade Cashews">
-                <div class="product-info">
-                    <h3>W-320 (Standard Grade)</h3>
-                    <p>Our most popular and versatile whole cashew, ideal for daily snacking and culinary use.</p>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="image5" alt="Cashew Splits (LWP)">
-                <div class="product-info">
-                    <h3>Cashew Splits (LWP)</h3>
-                    <p>Nutritious and budget-friendly broken pieces, perfect for baking, desserts, and Indian sweets.</p>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="image10" alt="Roasted and Salted Cashews">
-                <div class="product-info">
-                    <h3>Roasted & Salted</h3>
-                    <p>Our signature W-320 cashews, perfectly roasted and lightly seasoned for a crunchy treat.</p>
-                </div>
-            </div>
-        </div>
+    <section class="section quality" id="quality" aria-labelledby="quality-title">
+      <div class="quality-heading"><p class="eyebrow">THOUGHTFULLY SIMPLE</p><h2 id="quality-title">Nothing to distract.<br><em>Everything to enjoy.</em></h2></div>
+      <div class="quality-grid"><article><span class="feature-number">01 / THE INGREDIENT</span><h3>Only cashews.</h3><p>One ingredient, all the character. Our premium cashews let their natural flavour take centre stage.</p></article><article><span class="feature-number">02 / THE ROAST</span><h3>Made to savour.</h3><p>Drum roasted for a rich taste and a satisfying crunch, ready for your next well-earned pause.</p></article><article><span class="feature-number">03 / THE CHOICE</span><h3>Your kind of whole.</h3><p>Explore W180, W240 and W320 whole-cashew grades. Ask us to help you find the right fit.</p></article></div>
     </section>
-
-    <section class="features-section container" id="gallery">
-        <h2>🖼️ A Look Behind the Scenes</h2>
-        <div class="product-grid">
-            <div class="product-card">
-                <img src="image6" alt="Processing Unit">
-                <div class="product-info"><h4>State-of-the-Art Processing</h4></div>
-            </div>
-            <div class="product-card">
-                <img src="image7" alt="Hand-Sorting">
-                <div class="product-info"><h4>Skilled Hand-Sorting</h4></div>
-            </div>
-            <div class="product-card">
-                <img src="image8" alt="Drying Cashews">
-                <div class="product-info"><h4>The Kerala Sun Dry</h4></div>
-            </div>
-            <div class="product-card">
-                <img src="image9" alt="Packaged Product">
-                <div class="product-info"><h4>Ready for Dispatch</h4></div>
-            </div>
-        </div>
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="contact-copy"><p class="eyebrow">LET’S TALK CASHEWS</p><h2 id="contact-title">Something good<br><em>starts here.</em></h2><p>Stocking your pantry or sourcing for your business?<br>Get in touch for product details, prices and bulk enquiries.</p><a class="contact-phone" href="tel:+919656915303">+91 96569 15303 <span aria-hidden="true">↗</span></a><a class="contact-email" href="mailto:sales@mscashews.com">sales@mscashews.com</a></div>
+      <form class="enquiry" id="enquiry-form"><h3>Find your perfect pack.</h3><p>Choose your preferences to start a conversation.</p><div class="form-row"><div><label for="grade">Cashew grade</label><select id="grade" name="grade"><option value="Not sure — please advise">Help me choose</option><option>W180</option><option>W240</option><option>W320</option></select></div><div><label for="pack">Pack size</label><select id="pack" name="pack"><option>250 g</option><option selected>500 g</option><option>1 kg</option><option>Bulk requirement</option></select></div></div><label for="message">Anything else? <span>(optional)</span></label><textarea id="message" name="message" rows="3" maxlength="1000" placeholder="Tell us about the quantity or occasion…"></textarea><button class="button" type="submit">Enquire on WhatsApp <span aria-hidden="true">↗</span></button><p class="form-note">Opens WhatsApp with your enquiry. You review and send it.</p><noscript><p><a href="https://wa.me/919656915303">Contact us directly on WhatsApp</a></p></noscript></form>
     </section>
-
-    <section class="contact-section container" id="contact">
-        <h2>📞 Get in Touch</h2>
-        <p style="margin-bottom: 25px;">We'd love to hear from you! Reach out for bulk orders, custom requirements, or any inquiries.</p>
-        <div class="contact-details">
-            <div class="contact-item">
-                <div class="icon">📍</div>
-                <h4>Our Address</h4>
-                <p>[Your Full Business Address]</p>
-                <p>Kollam, Kerala, India - [PIN Code]</p>
-            </div>
-            <div class="contact-item">
-                <div class="icon">📱</div>
-                <h4>WhatsApp / Phone</h4>
-                <p>+91 [Your Phone Number]</p>
-                <a href="https://wa.me/yourphonenumber" class="cta-button" style="padding: 8px 15px; margin-top: 10px;">Chat on WhatsApp</a>
-            </div>
-            <div class="contact-item">
-                <div class="icon">📧</div>
-                <h4>Email Us</h4>
-                <p>[Your Email Address]</p>
-                <a href="mailto:youremail@example.com" class="cta-button" style="padding: 8px 15px; margin-top: 10px;">Send an Email</a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="footer-content">
-            <p>Copyright © 2024 [Your Business Name]. All Rights Reserved.</p>
-            <div class="footer-links">
-                <a href="#hero">Home</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-            </div>
-        </div>
-    </footer>
-
+    <section class="section faq" aria-labelledby="faq-title"><div><p class="eyebrow">A FEW GOOD QUESTIONS</p><h2 id="faq-title">The little details.</h2></div><div class="faq-list"><details><summary>What goes into Kajuva cashews?<span aria-hidden="true">+</span></summary><p>Kajuva contains one ingredient: cashew nuts (100%), drum roasted for rich flavour and crunch. Allergen information: contains nuts.</p></details><details><summary>Which grades and pack sizes can I enquire about?<span aria-hidden="true">+</span></summary><p>Our range includes W180, W240 and W320 whole-cashew grades, with 250 g, 500 g and 1 kg packaging. Contact us to confirm the grade and size combinations currently available.</p></details><details><summary>How should I store my cashews?<span aria-hidden="true">+</span></summary><p>Store in a cool, dry place away from direct sunlight. Once opened, reseal tightly or transfer to an airtight container.</p></details><details><summary>Can I place a bulk or business enquiry?<span aria-hidden="true">+</span></summary><p>Yes. Contact M S Cashews with your preferred grade and quantity. Our team can discuss current availability, pricing and order arrangements with you.</p></details></div></section>
+  </main>
+  <footer><div class="footer-main"><a class="brand" href="#home">KAJUVA<span>BY M S CASHEWS</span></a><p>Simple goodness.<br>Beautifully enjoyed.</p><div><span class="footer-label">FIND US</span><address>M S Cashews, TP IX 661–666<br>Thrikkovilvattom, Kannanalloor<br>Kollam, Kerala – 691577, India</address></div><div><span class="footer-label">SAY HELLO</span><a href="mailto:sales@mscashews.com">sales@mscashews.com</a><a href="tel:+919656915303">+91 96569 15303</a></div></div><div class="footer-bottom"><span>© <span id="year">2026</span> M S Cashews. All rights reserved.</span><span>FSSAI licence no. 11324999000783</span><a href="#home">Back to top ↑</a></div></footer>
 </body>
 </html>
+
+
