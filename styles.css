@@ -68,3 +68,6 @@ summary,.stock-gallery summary{font-size:16px;line-height:1.6}
  .enquiry{padding:27px 20px}.form-row{grid-template-columns:1fr;gap:0}
 }
 @media(max-width:380px){.footer-main{grid-template-columns:1fr}.hero-art{width:88%}.art-footnote{font-size:10px}.hero-actions .text-link{margin-top:2px}}
+
+/* Location details inherit the existing contact palette and type. */
+.contact-location{margin-top:30px}.contact-location h3{font-size:24px;margin-bottom:12px}.contact-location address{color:#c1cebe}
