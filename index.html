@@ -58,6 +58,74 @@
   <link rel="stylesheet" href="styles.css?v=20261001-1">
   <script src="script.js?v=20260930-5" defer></script>
 </head>
+<style>
+/* Contact section - Align and enlarge enquiry form */
+
+@media (min-width: 769px) {
+
+  /* Align both columns at the top */
+  .contact {
+    align-items: stretch;
+  }
+
+  /* Make the enquiry form taller */
+  .contact .enquiry {
+    align-self: stretch;
+    min-height: 550px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  /* Increase spacing between form elements */
+  .contact .enquiry .form-row {
+    margin-top: 30px;
+    margin-bottom: 25px;
+  }
+
+  /* Make the message box taller */
+  .contact .enquiry textarea {
+    min-height: 130px;
+    resize: vertical;
+  }
+
+  /* Increase input and dropdown height */
+  .contact .enquiry select {
+    min-height: 52px;
+  }
+
+  /* Add spacing above WhatsApp button */
+  .contact .enquiry button {
+    margin-top: 25px;
+    min-height: 60px;
+  }
+
+  /* Keep form note centered */
+  .contact .enquiry .form-note {
+    margin-top: 15px;
+    text-align: center;
+  }
+}
+
+/* Mobile adjustments */
+
+@media (max-width: 768px) {
+
+  .contact .enquiry {
+    padding: 25px;
+  }
+
+  .contact .enquiry textarea {
+    min-height: 120px;
+  }
+
+}
+</style>
+
+
+
+  
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <div class="announcement">A FAMILY CASHEW TRADITION SINCE 1965 <span>•</span> KOLLAM, KERALA</div>
