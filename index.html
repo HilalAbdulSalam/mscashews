@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#193d30">
   <title>Cashew Factory in Kollam, Kerala | M S Cashews</title>
-  <meta name="description" content="Discover M S Cashews, a family-run cashew processing business in Kollam, Kerala, and Kajuva premium cashews. W180, W240 and W320 grades. Retail and bulk enquiries.">
+  <meta name="description" content="Discover M S Cashews, a family-run cashew processing business in Kollam, Kerala, and Kajuva premium cashews. Whole, scorched and broken cashew grades. Retail and bulk enquiries.">
   <link rel="canonical" href="https://www.mscashews.com/">
   <meta property="og:title" content="M S Cashews | Cashew Manufacturers in Kollam, Kerala">
-  <meta property="og:description" content="Discover M S Cashews, a family-run cashew processing business in Kollam, Kerala, and Kajuva premium cashews. W180, W240 and W320 grades. Retail and bulk enquiries.">
+  <meta property="og:description" content="Discover M S Cashews, a family-run cashew processing business in Kollam, Kerala, and Kajuva premium cashews. Whole, scorched and broken cashew grades. Retail and bulk enquiries.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.mscashews.com/">
   <meta property="og:site_name" content="M S Cashews / Kajuva">
@@ -20,7 +20,7 @@
   <meta property="og:image:alt" content="A wooden bowl filled with golden whole cashews">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="M S Cashews | Cashew Manufacturers in Kollam, Kerala">
-  <meta name="twitter:description" content="Discover M S Cashews, a family-run cashew processing business in Kollam, Kerala, and Kajuva premium cashews. W180, W240 and W320 grades. Retail and bulk enquiries.">
+  <meta name="twitter:description" content="Discover M S Cashews, a family-run cashew processing business in Kollam, Kerala, and Kajuva premium cashews. Whole, scorched and broken cashew grades. Retail and bulk enquiries.">
   <meta name="twitter:image" content="https://www.mscashews.com/assets/cashew-bowl-premium.webp">
   <meta name="twitter:image:alt" content="A wooden bowl filled with golden whole cashews">
   <script type="application/ld+json">
@@ -57,7 +57,7 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css?v=20261001-1">
   <script src="script.js?v=20260930-5" defer></script>
-</head>
+
 <style>
 /* Contact section - Align and enlarge enquiry form */
 
@@ -121,7 +121,20 @@
   }
 
 }
+/* Cashew range overview */
+.grade-overview{border-top:1px solid var(--line)}
+.grade-overview-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;margin-top:40px}
+.grade-overview-grid article{border-top:1px solid var(--line);padding-top:24px}
+.grade-overview-grid h3{margin:16px 0}
+.grade-overview-grid p{color:var(--muted);line-height:1.8}
+.grade-overview-grid ul{list-style:none;padding:0;margin:24px 0 0;display:flex;flex-wrap:wrap;gap:8px}
+.grade-overview-grid li{background:var(--sage);padding:8px 12px;font-size:14px}
+.grade-overview-action{display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin-top:36px}
+.grade-overview-action p{font-size:14px;color:var(--muted);max-width:420px}
+@media(min-width:761px) and (max-width:1100px){.header nav{gap:14px;font-size:13px}.header .nav-contact{padding:10px 14px}}
+@media(max-width:760px){.grade-overview-grid{grid-template-columns:1fr;gap:28px}.grade-overview-action{align-items:flex-start;flex-direction:column}}
 </style>
+</head>
 
 
 
@@ -133,7 +146,7 @@
     <a class="brand" href="#home" aria-label="Kajuva home">KAJUVA<span>BY M S CASHEWS</span></a>
     <button class="menu-toggle" aria-controls="navigation" aria-expanded="false">Menu <span aria-hidden="true">☰</span></button>
     <nav id="navigation" aria-label="Main navigation">
-      <a href="#collection">Our collection</a><a href="#story">Our story</a><a href="#behind-scenes">Behind the scenes</a>
+      <a href="#collection">Our collection</a><a href="#cashew-grades">Cashew grades</a><a href="#story">Our story</a><a href="#behind-scenes">Behind the scenes</a>
       <a href="#contact" class="nav-contact">Let’s talk <span aria-hidden="true">↗</span></a>
     </nav>
   </header>
@@ -155,7 +168,7 @@
       </div>
       <a class="scroll-note" href="#collection">A TASTE OF THE GOOD LIFE <span aria-hidden="true">↓</span></a>
     </section>
-    <div class="qualities" aria-label="Product highlights"><span>100% cashew nuts</span><i aria-hidden="true">✧</i><span>Drum roasted</span><i aria-hidden="true">✧</i><span>Three whole-cashew grades</span><i aria-hidden="true">✧</i><span>From Kollam, Kerala</span></div>
+    <div class="qualities" aria-label="Product highlights"><span>100% cashew nuts</span><i aria-hidden="true">✧</i><span>Drum roasted</span><i aria-hidden="true">✧</i><span>Three Kajuva whole-cashew grades</span><i aria-hidden="true">✧</i><span>From Kollam, Kerala</span></div>
     <section class="section collection" id="collection" aria-labelledby="collection-title">
       <div class="section-top"><div><p class="eyebrow">THE KAJUVA COLLECTION</p><h2 id="collection-title">Good things.<br><em>In your favourite size.</em></h2></div><p>For a quiet moment, a shared bowl, or a kitchen that’s always creating. Find a pack that fits your everyday.</p></div>
       <div class="product-grid">
@@ -164,6 +177,15 @@
         <article class="product"><div class="product-image"><span class="product-tag">THE PANTRY ESSENTIAL</span><img src="assets/kajuva-pouch-premium.webp" width="864" height="1200" alt="Kajuva emerald and gold pouch concept" loading="lazy"><span class="pack-weight">1 <small>kg</small></span></div><div class="product-title"><h3>More to savour</h3><span>1 kg</span></div><p>For generous hosts and inspired home cooks.</p><a href="https://wa.me/919656915303?text=Hello%20Kajuva%2C%20I%27d%20like%20to%20enquire%20about%20the%201%20kg%20pack." target="_blank" rel="noopener noreferrer" class="product-link">Enquire about this pack <span aria-hidden="true">↗</span></a></article>
       </div>
       <p class="collection-note">Choose from W180, W240 and W320 grades. Contact us for current prices and availability.<br>Packaging shown is a design concept. Final packaging may vary.</p>
+    </section>
+    <section class="section grade-overview" id="cashew-grades" aria-labelledby="grades-title">
+      <div class="section-top"><div><p class="eyebrow">THE M S CASHEWS RANGE</p><h2 id="grades-title">Ten grades.<br><em>Find your fit.</em></h2></div><p>Explore our whole cashews, scorched grades, pieces and bits. Tell us the grade and quantity you need, and we’ll help with current availability, packaging and pricing.</p></div>
+      <div class="grade-overview-grid">
+        <article><span class="feature-number">01 / WHITE WHOLES</span><h3>White whole cashews.</h3><p>Explore five white whole grades and ask us for the specifications that suit your requirements.</p><ul><li>W180</li><li>W210</li><li>W240</li><li>W320</li><li>W450</li></ul></article>
+        <article><span class="feature-number">02 / SCORCHED GRADES</span><h3>Scorched cashews.</h3><p>Choose from whole and split forms. Contact our team for details of the current batches.</p><ul><li>SW — Scorched Wholes</li><li>SS — Scorched Splits</li></ul></article>
+        <article><span class="feature-number">03 / PIECES &amp; BITS</span><h3>Cashew pieces &amp; bits.</h3><p>Looking for smaller pieces? Share your requirements so we can help you choose a suitable grade.</p><ul><li>LWP — Large White Pieces</li><li>SWP — Small White Pieces</li><li>BB — Baby Bits</li></ul></article>
+      </div>
+      <div class="grade-overview-action"><a class="button" href="#contact">Enquire about a grade <span aria-hidden="true">↗</span></a><p>Grade availability and packaging options are confirmed when you enquire.</p></div>
     </section>
     <section class="story" id="story" aria-labelledby="story-title">
       <div class="story-art"><span class="eyebrow">ROOTED IN KOLLAM</span><img src="assets/cashews-editorial.webp" alt="Whole roasted cashews in a wooden bowl, styled with natural linen and warm stone" width="1122" height="1402" loading="lazy"><span class="story-art-caption">ROOTS THAT RUN DEEP.<br>A TRADITION THAT CONTINUES.</span></div>
@@ -179,7 +201,7 @@
       <div class="quality-grid"><article><span class="feature-number">01 / THE INGREDIENT</span><h3>Only cashews.</h3><p>One ingredient, all the character. Our premium cashews let their natural flavour take centre stage.</p></article><article><span class="feature-number">02 / THE ROAST</span><h3>Made to savour.</h3><p>Drum roasted for a rich taste and a satisfying crunch, ready for your next well-earned pause.</p></article><article><span class="feature-number">03 / THE CHOICE</span><h3>Your kind of whole.</h3><p>Explore W180, W240 and W320 whole-cashew grades. Ask us to help you find the right fit.</p></article></div>
     </section>
     <section class="section behind-scenes" id="behind-scenes" aria-labelledby="behind-title">
-      <div class="section-top"><div><p class="eyebrow">A CLOSER LOOK AT M S CASHEWS</p><h2 id="behind-title">M S Cashews —<br><em>Cashew processing<br>in Kollam, Kerala.</em></h2></div><p>M S Cashews is a family-run cashew processing business and cashew nut wholesaler based in Kannanalloor, Kollam, Kerala. Our cashew factory supplies quality cashew nuts in W180, W240, W320 and other available grades for retail and bulk enquiries. We also bring our family's cashew expertise to Kajuva, our premium drum-roasted cashew brand.</p></div>
+      <div class="section-top"><div><p class="eyebrow">A CLOSER LOOK AT M S CASHEWS</p><h2 id="behind-title">M S Cashews —<br><em>Cashew processing<br>in Kollam, Kerala.</em></h2></div><p>M S Cashews is a family-run cashew processing business and cashew nut wholesaler based in Kannanalloor, Kollam, Kerala. Our cashew factory supplies quality cashew nuts in whole, scorched, split and broken grades for retail and bulk enquiries. We also bring our family's cashew expertise to Kajuva, our premium drum-roasted cashew brand.</p></div>
       <div class="premises-grid">
         <figure class="premises-main"><a href="assets/factory-front.webp" target="_blank" rel="noopener" aria-label="View the M S Cashews premises image in a new tab"><img src="assets/factory-front.webp" alt="Front of the M S Cashews premises in Kannanalloor, Kollam" width="1600" height="900" loading="lazy"></a><figcaption><span>01 / OUR HOME</span><h3>Rooted in Kannanalloor.</h3></figcaption></figure>
         <figure><a href="assets/factory-inside.webp" target="_blank" rel="noopener" aria-label="View the work area image in a new tab"><img src="assets/factory-inside.webp" alt="Cashew equipment and blue storage crates inside M S Cashews, Kannanalloor" width="1600" height="900" loading="lazy"></a><figcaption><span>02 / INSIDE M S CASHEWS</span><h3>Where the work happens.</h3></figcaption></figure>
@@ -204,11 +226,12 @@
         <div class="google-map" style="width:100%;max-width:100%;margin:0 0 14px;border-radius:12px;overflow:hidden;">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126139.27699196005!2d76.51879639726563!3d8.893311200000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05e31a122a84a1%3A0x15b1edde694fe89e!2sMs%20Cashews!5e0!3m2!1sen!2sin!4v1793275626502!5m2!1sen!2sin" title="M S Cashews location on Google Maps" width="100%" height="300" style="display:block;width:100%;border:0;" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
         </div></div></div>
-      <form class="enquiry" id="enquiry-form"><h3>Find your perfect pack.</h3><p>Choose your preferences to start a conversation.</p><div class="form-row"><div><label for="grade">Cashew grade</label><select id="grade" name="grade"><option value="Not sure — please advise">Help me choose</option><option>W180</option><option>W240</option><option>W320</option></select></div><div><label for="pack">Pack size</label><select id="pack" name="pack"><option>250 g</option><option selected>500 g</option><option>1 kg</option><option>Bulk requirement</option><option>Other</option></select></div></div><label for="message">Anything else? <span>(optional)</span></label><textarea id="message" name="message" rows="3" maxlength="1000" placeholder="Tell us about the quantity or occasion…"></textarea><button class="button" type="submit">Enquire on WhatsApp <span aria-hidden="true">↗</span></button><p class="form-note">Opens WhatsApp with your enquiry. You review and send it.</p><noscript><p><a href="https://wa.me/919656915303">Contact us directly on WhatsApp</a></p></noscript></form>
+      <form class="enquiry" id="enquiry-form"><h3>Find your cashew grade.</h3><p>Choose a grade and pack size, or tell us your bulk requirement.</p><div class="form-row"><div><label for="grade">Cashew grade</label><select id="grade" name="grade"><option value="Not sure — please advise">Help me choose</option><option>W180</option><option>W210</option><option>W240</option><option>W320</option><option>W450</option><option>SW (Scorched Wholes)</option><option>SS (Scorched Splits)</option><option>LWP (Large White Pieces)</option><option>SWP (Small White Pieces)</option><option>BB (Baby Bits)</option></select></div><div><label for="pack">Pack size</label><select id="pack" name="pack"><option>250 g</option><option selected>500 g</option><option>1 kg</option><option>Bulk requirement</option><option>Other</option></select></div></div><label for="message">Anything else? <span>(optional)</span></label><textarea id="message" name="message" rows="3" maxlength="1000" placeholder="Tell us about the quantity or occasion…"></textarea><button class="button" type="submit">Enquire on WhatsApp <span aria-hidden="true">↗</span></button><p class="form-note">Opens WhatsApp with your enquiry. You review and send it.</p><noscript><p><a href="https://wa.me/919656915303">Contact us directly on WhatsApp</a></p></noscript></form>
     </section>
-    <section class="section faq" aria-labelledby="faq-title"><div><p class="eyebrow">A FEW GOOD QUESTIONS</p><h2 id="faq-title">The little details.</h2></div><div class="faq-list"><details><summary>What goes into Kajuva cashews?<span aria-hidden="true">+</span></summary><p>Kajuva contains one ingredient: cashew nuts (100%), drum roasted for rich flavour and crunch. Allergen information: contains nuts.</p></details><details><summary>Which grades and pack sizes can I enquire about?<span aria-hidden="true">+</span></summary><p>Our range includes W180, W240 and W320 whole-cashew grades, with 250 g, 500 g and 1 kg packaging. Contact us to confirm the grade and size combinations currently available.</p></details><details><summary>How should I store my cashews?<span aria-hidden="true">+</span></summary><p>Store in a cool, dry place away from direct sunlight. Once opened, reseal tightly or transfer to an airtight container.</p></details><details><summary>Can I place a bulk or business enquiry?<span aria-hidden="true">+</span></summary><p>Yes. Contact M S Cashews with your preferred grade and quantity. Our team can discuss current availability, pricing and order arrangements with you.</p></details></div></section>
+    <section class="section faq" aria-labelledby="faq-title"><div><p class="eyebrow">A FEW GOOD QUESTIONS</p><h2 id="faq-title">The little details.</h2></div><div class="faq-list"><details><summary>What goes into Kajuva cashews?<span aria-hidden="true">+</span></summary><p>Kajuva contains one ingredient: cashew nuts (100%), drum roasted for rich flavour and crunch. Allergen information: contains nuts.</p></details><details><summary>Which grades and pack sizes can I enquire about?<span aria-hidden="true">+</span></summary><p>The M S Cashews range includes W180, W210, W240, W320, W450, SW, SS, LWP, SWP and BB. Our Kajuva retail collection features W180, W240 and W320 in 250 g, 500 g and 1 kg packs. Contact us to confirm current grade and packaging combinations, or discuss bulk requirements.</p></details><details><summary>How should I store my cashews?<span aria-hidden="true">+</span></summary><p>Store in a cool, dry place away from direct sunlight. Once opened, reseal tightly or transfer to an airtight container.</p></details><details><summary>Can I place a bulk or business enquiry?<span aria-hidden="true">+</span></summary><p>Yes. Contact M S Cashews with your preferred grade and quantity. Our team can discuss current availability, pricing and order arrangements with you.</p></details></div></section>
   </main>
   <footer><div class="footer-main"><a class="brand" href="#home">KAJUVA<span>BY M S CASHEWS</span></a><p>Simple goodness.<br>Beautifully enjoyed.</p><div><span class="footer-label">FIND US</span><address>M S Cashews, TP IX 661–666<br>Thrikkovilvattom, Kannanalloor<br>Kollam, Kerala – 691577, India</address></div><div><span class="footer-label">SAY HELLO</span><a href="mailto:sales@mscashews.com">sales@mscashews.com</a><a href="tel:+919656915303">+91 96569 15303</a></div></div><div class="footer-bottom"><span>© <span id="year">2026</span> M S Cashews. All rights reserved.</span><span>FSSAI licence no. 11324999000783</span><a href="#home">Back to top ↑</a></div></footer>
 </body>
 </html>
+
 
